@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carly Jazwin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="main-container">
+      <pre class="ascii-name">
+
+        ...                                         ..                       .       -[]                                                 .                  
+        xH88"`~ .x8X                             x .d88"    ..              .x88888x.                                x=~                @88>                
+      :8888   .f"8888Hf                .u    .    5888R    @L              :8**888888X.  :>                  ..     88x.   .e.   .e.    %8P      u.    u.   
+     :8888>  X8L  ^""`        u      .d88B :@8c   '888R   9888i   .dL      f    `888888x./        u        .@88i   '8888X.x888:.x888     .     x@88k u@88c. 
+     X8888  X888h          us888u.  ="8888f8888r   888R   `Y888k:*888.    '       `*88888~     us888u.    ""%888>   `8888  888X '888k  .@88u  ^"8888""8888" 
+     88888  !88888.     .@88 "8888"   4888>'88"    888R     888E  888I     \.    .  `?)X.   .@88 "8888"     '88%     X888  888X  888X ''888E`   8888  888R  
+     88888   %88888     9888  9888    4888> '      888R     888E  888I      `~=-^   X88> ~  9888  9888    ..dILr~`   X888  888X  888X   888E    8888  888R  
+     88888 '> `8888>    9888  9888    4888>        888R     888E  888I             X8888  ~ 9888  9888   '".-%88b    X888  888X  888X   888E    8888  888R  
+     `8888L %  ?888   ! 9888  9888   .d888L .+     888R     888E  888I             488888   9888  9888    @  '888k  .X888  888X. 888~   888E    8888  888R  
+      `8888  `-*""   /  9888  9888   ^"8888*"     .888B .  x888N><888'     .xx.     88888X  9888  9888   8F   8888  `%88%``"*888Y"      888&   "*88*" 8888" 
+        "888.      :"   "888*""888"     "Y"       ^*888%    "88"  888     '*8888.   '88888> "888*""888" '8    8888    `~     `"         R888"    ""   'Y"   
+          `""***~"`      ^Y"   ^Y'                  "%            88F       88888    '8888>  ^Y"   ^Y'  '8    888F                       ""                 
+                                                                 98"        `8888>    `888               %k  <88F                                           
+                                                               ./"           "8888     8%                 "+:*%`                                            
+                                                              ~`              `"888x:-"                           
+      </pre>
+      <div class="introduction">
+        <h3 class="message-text">
+          Welcome to my CLI portfolio! This interface allows you to navigate and explore my projects and experience using command-line commands.
+        </h3>
+        <h4 class="message-text">
+          Type <span class="help-text">'help'</span> to view a list of available
+          commands.
+        </h4>
+      </div>
+      <div id="command-output">
+        <!-- all the command results goes here -->
+      </div>
+      <div class="input-container">
+        <label for="command" class="input-label">></label>
+        <input
+          type="text"
+          name="command"
+          id="command"
+          class="input-command input-text"
+          autofocus
+        />
+      </div>
+    </div>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
