@@ -15,11 +15,11 @@
 
 ## Screenshot
 
-![](./assets/screenshots/preview_1.png)
-![](./assets/screenshots/preview_2.png)
-![](./assets/screenshots/preview_3.png)
-![](./assets/screenshots/preview_4.png)
-![](./assets/screenshots/preview_5.png)
+![](./assets/screenshots/preview-1.png)
+![](./assets/screenshots/preview-2.png)
+![](./assets/screenshots/preview-3.png)
+![](./assets/screenshots/preview-4.png)
+![](./assets/screenshots/preview-5.png)
 
 ## Built With
 - HTML  
