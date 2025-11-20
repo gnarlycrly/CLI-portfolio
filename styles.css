@@ -135,13 +135,37 @@ body {
   min-width: 20px;        
 }
 
-.project-img {
-  width: 48px;
-  height: 48px;
-  object-fit: cover;
-  border-radius: 4px;
-  border: 1px solid #ff9ecf;
+.project-card {
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #555;
 }
+
+.project-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #ffe6a7;
+}
+
+.project-image {
+  width: 400px;      /* make image bigger */
+  max-width: 90%;
+  margin: 10px 0 15px 0;
+  border-radius: 8px;
+}
+
+.project-description {
+  font-size: 15px;
+  color: #f6d6f7;
+  max-width: 600px;
+}
+
+
+.project-row {
+  margin-bottom: 40px;    /* add space between projects */
+  display: block;
+}
+
 
 .desc-text {
   color: #f6d6f7;          

@@ -14,13 +14,13 @@ const DATA = {
   ],
 
 projects: [
-  {
+    {
     id: "p1",
-    title: "Pokédoro Timer",
-    image: "./assets/screenshots/poke.png",
+    title: "Carly's Run Club",
+    image: "./assets/screenshots/runclub.png",
     description:
-      "Pomodoro timer with Pokémon-inspired UI built with React, Node.js, and Electron.",
-    url: "https://github.com/gnarlycrly/pokedoro-timer"
+      "Full-stack web app for organizing local runs in Tempe, built with HTML/CSS/JS, Node.js (AWS Lambda), and MySQL/DynamoDB.",
+    url: "https://d2u9ocgx4ho4qa.cloudfront.net/"
   },
   {
     id: "p2",
@@ -37,6 +37,14 @@ projects: [
     description:
       "SwiftUI iOS coffee shop finder app using MVVM architecture, MapKit, and Firebase.",
     url: "https://github.com/gnarlycrly/localgrounds"
+  },
+  {
+    id: "p4",
+    title: "Pokédoro Timer",
+    image: "./assets/screenshots/poke.png",
+    description:
+      "Pomodoro timer with Pokémon-inspired UI built with React, Node.js, and Electron.",
+    url: "https://github.com/gnarlycrly/pokedoro-timer"
   }
 ],
 
@@ -63,45 +71,26 @@ const getAbout = () =>
   `<div class="command-result"><p class="about-text">${DATA.about}</p></div>`;
 
 const getProjects = () => {
-  let html = `
-    <div class="command-result">
-      <table class="data-table">
-        <tr>
-          <th>Image</th>
-          <th>Project</th>
-          <th>Description</th>
-        </tr>
-  `;
+  let html = `<div class="command-result">`;
 
-  DATA.projects.forEach((p) => {
+  DATA.projects.forEach(p => {
     html += `
-      <tr>
-        <td>
-          ${
-            p.image
-              ? `<img src="${p.image}" class="project-img" alt="${p.title}" />`
-              : ""
-          }
-        </td>
-        <td class="data-name-th">
-          ${
-            p.url
-              ? `<a href="${p.url}" target="_blank" class="data-link">${p.title}</a>`
-              : `${p.title}`
-          }
-        </td>
-        <td class="data-description-td">${p.description || ""}</td>
-      </tr>
+      <div class="project-card">
+        <h3 class="project-title">
+          <a href="${p.url}" target="_blank" class="data-link">${p.title}</a>
+        </h3>
+
+        <img src="${p.image}" class="project-image" />
+
+        <p class="project-description">${p.description}</p>
+      </div>
     `;
   });
 
-  html += `
-      </table>
-    </div>
-  `;
-
+  html += `</div>`;
   return html;
 };
+
 
 
 const getAchievements = () => {
