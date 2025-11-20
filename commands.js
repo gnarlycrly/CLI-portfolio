@@ -17,7 +17,7 @@ projects: [
   {
     id: "p1",
     title: "Pokédoro Timer",
-    image: "/assets/screenshots/poke.png",
+    image: "./assets/screenshots/poke.png",
     description:
       "Pomodoro timer with Pokémon-inspired UI built with React, Node.js, and Electron.",
     url: "https://github.com/gnarlycrly/pokedoro-timer"
@@ -25,7 +25,7 @@ projects: [
   {
     id: "p2",
     title: "Byte & Slice",
-    image: "/assets/screenshots/byte.png",
+    image: "./assets/screenshots/byte.png",
     description:
       "Full-stack pizza ordering web app with Flask backend and PostgreSQL database.",
     url: "https://github.com/gnarlycrly/byte-and-slice"
@@ -33,7 +33,7 @@ projects: [
   {
     id: "p3",
     title: "LocalGrounds",
-    image: "/assets/screenshots/local.png",
+    image: "./assets/screenshots/local.png",
     description:
       "SwiftUI iOS coffee shop finder app using MVVM architecture, MapKit, and Firebase.",
     url: "https://github.com/gnarlycrly/localgrounds"
