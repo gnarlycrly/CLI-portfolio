@@ -17,7 +17,7 @@ const DATA = {
     {
       id: "p1",
       title: "Pokédoro Timer",
-      //image: "./assets/projects/pokedoro.png",
+      image: "./assets/projects/pokedoro.png",
       description: "Pomodoro productivity app built with React, Node.js, and Electron. Features Pokémon-inspired pixel-art UI, customizable work/break intervals",
       url: "https://github.com/gnarlycrly/pokedoro-timer"
     },
