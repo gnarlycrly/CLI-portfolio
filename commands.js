@@ -62,21 +62,47 @@ const website = DATA.website;
 const getAbout = () =>
   `<div class="command-result"><p class="about-text">${DATA.about}</p></div>`;
 
-
 const getProjects = () => {
-  let html = `<div class="command-result"><table class="data-table">`;
-  DATA.projects.forEach(p => {
+  let html = `
+    <div class="command-result">
+      <table class="data-table">
+        <tr>
+          <th>Image</th>
+          <th>Project</th>
+          <th>Description</th>
+        </tr>
+  `;
+
+  DATA.projects.forEach((p) => {
     html += `
       <tr>
-        <th class="data-name-th">
-          ${p.url ? `<a href="${p.url}" target="_blank" class="data-link">${p.title}</a>` : `${p.title}`}
-        </th>
+        <td>
+          ${
+            p.image
+              ? `<img src="${p.image}" class="project-img" alt="${p.title}" />`
+              : ""
+          }
+        </td>
+        <td class="data-name-th">
+          ${
+            p.url
+              ? `<a href="${p.url}" target="_blank" class="data-link">${p.title}</a>`
+              : `${p.title}`
+          }
+        </td>
         <td class="data-description-td">${p.description || ""}</td>
-      </tr>`;
+      </tr>
+    `;
   });
-  html += `</table></div>`;
+
+  html += `
+      </table>
+    </div>
+  `;
+
   return html;
 };
+
 
 const getAchievements = () => {
   let html = `<div class="command-result"><table class="data-table">`;
