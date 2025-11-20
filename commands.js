@@ -1,10 +1,8 @@
-/* commands.js — local data only */
-
 const DATA = {
   name: "Carly Jazwin",
   email: "cjazwin@asu.edu",
   about:
-    "Hi! I’m Carly,  a CS student and software engineer who loves building things that are useful, intuitive, and a little bit fun. I work across full-stack, iOS, and machine learning, and I’m always excited about turning ideas into real products.",
+    "I’m a Computer Science student at Arizona State University who thrives at the intersection of software engineering and AI/ML. My experience spans from embedded systems development to computer vision research, where I’ve worked on making software both reliable and forward-looking. I’m passionate about building projects that are impactful, scalable, and creative — whether that means powering mission-critical systems or experimenting with new machine learning applications.",
   website: "https://about-carly-jazwin.netlify.app/",
 
   skills: [
@@ -18,14 +16,6 @@ const DATA = {
   projects: [
     {
       id: "p1",
-      title: "Carly's Run Club",
-      //image: "./assets/projects/pokedoro.png",
-      description: "Full-stack web application for organizing local runs in Tempe, featuring HTML/CSS/Javascript frontend, Node.js (AWS Lambda) Backend, MySQL (RDS) + DynamoDB Database, & Hosted with S3 + CloudFront"
-",
-      url: "https://d2u9ocgx4ho4qa.cloudfront.net/"
-    },
-    {
-      id: "p1",
       title: "Pokédoro Timer",
       //image: "./assets/projects/pokedoro.png",
       description: "Pomodoro productivity app built with React, Node.js, and Electron. Features Pokémon-inspired pixel-art UI, customizable work/break intervals",
@@ -34,7 +24,7 @@ const DATA = {
     {
       id: "p1",
       title: "Byte & Slice",
-     // image: "./assets/projects/pokedoro.png",
+      //image: "./assets/projects/pokedoro.png",
       description: "Full-stack web application for pizza delivery, featuring an HTML/CSS frontend, Flask backend, and PostgreSQL database. Supports location-based ordering, custom toppings, and persistent order management.",
       url: "https://github.com/gnarlycrly/byte-and-slice"
     },
