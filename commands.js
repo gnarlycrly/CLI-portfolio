@@ -19,7 +19,7 @@ const DATA = {
     {
       id: "p1",
       title: "Carly's Run Club",
-      image: "./assets/projects/pokedoro.png",
+      //image: "./assets/projects/pokedoro.png",
       description: "Full-stack web application for organizing local runs in Tempe, featuring HTML/CSS/Javascript frontend, Node.js (AWS Lambda) Backend, MySQL (RDS) + DynamoDB Database, & Hosted with S3 + CloudFront"
 ",
       url: "https://d2u9ocgx4ho4qa.cloudfront.net/"
@@ -27,14 +27,14 @@ const DATA = {
     {
       id: "p1",
       title: "Pokédoro Timer",
-      image: "./assets/projects/pokedoro.png",
+      //image: "./assets/projects/pokedoro.png",
       description: "Pomodoro productivity app built with React, Node.js, and Electron. Features Pokémon-inspired pixel-art UI, customizable work/break intervals",
       url: "https://github.com/gnarlycrly/pokedoro-timer"
     },
     {
       id: "p1",
       title: "Byte & Slice",
-      image: "./assets/projects/pokedoro.png",
+     // image: "./assets/projects/pokedoro.png",
       description: "Full-stack web application for pizza delivery, featuring an HTML/CSS frontend, Flask backend, and PostgreSQL database. Supports location-based ordering, custom toppings, and persistent order management.",
       url: "https://github.com/gnarlycrly/byte-and-slice"
     },
