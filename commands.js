@@ -16,46 +16,109 @@ const DATA = {
 projects: [
     {
     id: "p1",
-    title: "Carly's Run Club",
+    title: "$ Carly's Run Club",
     image: "./assets/screenshots/runclub.png",
-    description:
-      "Full-stack web app for organizing local runs in Tempe, built with HTML/CSS/JS, Node.js (AWS Lambda), and MySQL/DynamoDB.",
-    url: "https://d2u9ocgx4ho4qa.cloudfront.net/"
+    description: `
+> Serverless RSVP app for local running events in Tempe.
+> Built with HTML/CSS/JavaScript and a Node.js AWS Lambda backend.
+> Uses API Gateway, MySQL (RDS), and DynamoDB for fast event + RSVP handling.
+> Globally deployed on S3 + CloudFront for low-latency performance.
+
+`,
+  live: "https://carlys-run-club.com/",
+   github: "https://d2u9ocgx4ho4qa.cloudfront.net/"
   },
   {
     id: "p2",
-    title: "Byte & Slice",
-    image: "./assets/screenshots/byte.png",
-    description:
-      "Full-stack pizza ordering web app with Flask backend and PostgreSQL database.",
-    url: "https://github.com/gnarlycrly/byte-and-slice"
-  },
-  {
-    id: "p3",
-    title: "LocalGrounds",
+    title: "$ LocalGrounds",
     image: "./assets/screenshots/local.png",
-    description:
-      "SwiftUI iOS coffee shop finder app using MVVM architecture, MapKit, and Firebase.",
-    url: "https://github.com/gnarlycrly/localgrounds"
+    description:`
+> SwiftUI iOS cafe finder using MVVM architecture and real Yelp API data.
+> Firebase Auth + Firestore store favorites, notes, and user profiles.
+> Integrates OpenAI API to summarize cafe notes with AI-powered sentiment.
+> Includes MapKit and live location filtering to show nearby cafes.
+      `,
+    github: "https://github.com/gnarlycrly/localgrounds",
+    imgWidth: "520px"
+  },
+   {
+    id: "p3",
+    title: "$ Housing Price Regression MLE",
+    image: "./assets/screenshots/housing.png",
+    description: `
+> Built a full ML pipeline including preprocessing, feature engineering, and time-aware train/test splits.
+> Used Great Expectations to validate dataset quality and prevent leakage.
+> Trained and optimized an XGBoost regression model using Optuna; tracked metrics with MLflow.
+> Packaged the model in Docker and deployed a scalable FastAPI service on AWS ECS Fargate with S3-backed storage.
+> Built a Streamlit + Plotly dashboard to visualize predictions, errors, and model performance over time.
+`,
+  live: "https://housing-ml.carlyjazwin.com/dashboard/", 
+   github: "https://github.com/gnarlycrly/ml-housing-regression",
+  imgWidth: "260px"
+
   },
   {
     id: "p4",
-    title: "Pokédoro Timer",
-    image: "./assets/screenshots/poke.png",
+    title: "$ Byte & Slice",
+    image: "./assets/screenshots/byte.png",
     description:
-      "Pomodoro timer with Pokémon-inspired UI built with React, Node.js, and Electron.",
-    url: "https://github.com/gnarlycrly/pokedoro-timer"
+      `
+> Full-stack pizza ordering system with HTML/CSS/JavaScript frontend and Flask backend.
+> Built menu selection, custom toppings, and dynamic price calculation.
+> Stores orders, customers, and inventory in a PostgreSQL database.
+> Includes admin views for reviewing orders and managing order flow.
+      `,
+    github: "https://github.com/gnarlycrly/byte-and-slice",
+    imgWidth: "380px"
+  },
+  {
+    id: "p5",
+    title: "$ Pokédoro Timer",
+    image: "./assets/screenshots/poke.png",
+    description:`
+> A desktop Pomodoro productivity app with a nostalgic Pokémon aesthetic, built with React, Node.js, and Electron.
+> Features customizable focus and break intervals, animated UI components, and themed sound effects.
+> Tracks completed cycles and session history so users can monitor their productivity.
+> Uses Electron to package the app into a cross-platform desktop application with local state persistence.
+
+    `,
+    github: "https://github.com/gnarlycrly/pokedoro-timer",
+    imgWidth: "260px"
   }
 ],
 
   achievements: [
     {
-      id: "a1",
-      title: "Dean’s List",
-      description: "ASU Dean’s List 2022–2025",
-      url: ""
-    }
-    // add more...
+    id: "a1",
+    title: "Dean’s List",
+    description: "ASU Dean’s List (2022–2025)",
+    url: ""
+  },
+  {
+    id: "a2",
+    title: "NSF IRES Research Fellow",
+    description: "Selected for competitive international ML research program in Dublin (2024)",
+    url: ""
+  },
+  {
+    id: "a3",
+    title: "Research Presentation",
+    description: "Presented biomaterial ML results at NSF IRES International Symposium",
+    url: ""
+  },
+  {
+    id: "a4",
+    title: "Imaging Lab Research",
+    description: "Contributed to CLIP-regularized Restormer/DATUM image reconstruction pipeline",
+    url: ""
+  },
+  {
+    id: "a5",
+    title: "FIRST Robotics",
+    description: "Three years competitive FTC/FRC robotics experience",
+    url: ""
+  }
+    
   ],
 
   contacts: [
@@ -76,11 +139,20 @@ const getProjects = () => {
   DATA.projects.forEach(p => {
     html += `
       <div class="project-card">
-        <h3 class="project-title">
-          <a href="${p.url}" target="_blank" class="data-link">${p.title}</a>
-        </h3>
+        <h3 class="project-title">${p.title}</h3>
 
-        <img src="${p.image}" class="project-image" />
+        <div class="project-links">
+    ${p.github ? `<a href="${p.github}" target="_blank" class="data-link">&lt;GitHub&gt;</a>` : ""}
+    ${p.live ? `<a href="${p.live}" target="_blank" class="data-link">&lt;Live&nbsp;Site&gt;</a>` : ""}
+
+    </div>
+
+
+        <img 
+          src="${p.image}" 
+          class="project-image"
+          style="width: ${p.imgWidth || '400px'}"
+        />
 
         <p class="project-description">${p.description}</p>
       </div>
@@ -126,7 +198,6 @@ const getHelp = () => {
     { command: "skills",       description: "list skills" },
     { command: "projects",     description: "list recent projects" },
     { command: "achievements", description: "show achievements" },
-    { command: "website",      description: "open portfolio site" },
     { command: "contact",      description: "show contact info" },
     { command: "clear",        description: "clear terminal output" },
     { command: "cmd/ctrl + k", description: "shortcut to clear terminal" },
@@ -153,18 +224,21 @@ const achievementsSectionHTML = getAchievements();
 const contactSectionHTML      = getContact();
 const helpSectionHTML         = getHelp();
 const websiteSectionHTML      = getWebsite();
-const skillsSectionHTML =
-  `<div class="command-result">
-     <div class="margin-bottom flex-column flex-row-gap">
-       <p class="message-text"><strong>Skills</strong></p>
-       <div><strong>Programming Languages:</strong> Python, C/C++, Java, JavaScript</div>
-       <div><strong>Frontend:</strong> HTML, CSS, React</div>
-       <div><strong>Backend & APIs:</strong> Node.js (Express), Python Flask, REST</div>
-       <div><strong>Databases:</strong> PostgreSQL, SQL</div>
-       <div><strong>AI/ML:</strong> PyTorch, TensorFlow, Neural Networks, Computer Vision</div>
-       <div><strong>Tools & Platforms:</strong> Git, GitLab CI, Jira, Agile, Unix/Linux (Ubuntu)</div>
-     </div>
-   </div>`;
+const skillsSectionHTML = `
+<div class="command-result">
+  <pre class="skills-pre">
+<span class="skill-label"> Languages:</span>          <span class="skill-value">Python, JavaScript, TypeScript, C/C++, Java, SQL, NoSQL</span>
+<span class="skill-label"> Web:</span>                <span class="skill-value">React, Next.js, Node.js, HTML, CSS</span>
+<span class="skill-label"> Mobile:</span>             <span class="skill-value">Swift, SwiftUI (MVVM), Firebase</span>
+<span class="skill-label"> Databases:</span>          <span class="skill-value">PostgreSQL, MySQL, DynamoDB, Firestore</span>
+<span class="skill-label"> Machine Learning:</span>   <span class="skill-value">PyTorch, TensorFlow, Hugging Face, XGBoost, Optuna, MLflow</span>
+<span class="skill-label"> Cloud & DevOps:</span>     <span class="skill-value">AWS (Lambda, API Gateway, S3, RDS, DynamoDB, ECS), Docker, Git</span>
+<span class="skill-label"> Tools:</span>              <span class="skill-value">GitLab CI/CD, Linux, Bash, Jira</span>
+  </pre>
+</div>`;
+
+
+
 
 
 export {

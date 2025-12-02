@@ -25,7 +25,7 @@ body {
 
 .ascii-name {
   color: #ff9ecf; 
-  font-size: 0.7vw;
+  font-size: 0.5vw;
   margin-top: 15px;
 }
 
@@ -136,13 +136,13 @@ body {
 }
 
 .project-card {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #555;
 }
 
 .project-title {
-  font-size: 20px;
+  font-size: 18px;
   margin-bottom: 10px;
   color: #ffe6a7;
 }
@@ -150,14 +150,59 @@ body {
 .project-image {
   width: 400px;      /* make image bigger */
   max-width: 90%;
-  margin: 10px 0 15px 0;
-  border-radius: 8px;
+  margin: 10px 0 1px 0;
+  border-radius: 2px;
 }
 
 .project-description {
+  white-space: pre;
   font-size: 15px;
-  color: #f6d6f7;
+  line-height: 1.4;
+  color: #b5eaea;
   max-width: 600px;
+}
+.project-links {
+  margin: 6px 0 12px 0;
+  display: flex;
+  gap: 14px;
+}
+
+.project-links a {
+  color: #b5eaea;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  opacity: 0.85;
+}
+
+.project-links a:hover {
+  opacity: 1;
+  text-decoration: none;
+}
+
+.skills-pre {
+  white-space: pre;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 15px;
+  line-height: 1.55;
+  color: #b5eaea;
+}
+
+
+.skills-pre {
+  white-space: pre; 
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.skill-label {
+  color: #ffe6a7;       /* yellow like your cmd-text */
+  font-weight: 600;     /* bold like your command labels */
+}
+
+.skill-value {
+  color: #f6d6f7;       /* your light pink/purple body text */
+  font-weight: 300;
 }
 
 
