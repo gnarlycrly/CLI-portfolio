@@ -25,8 +25,8 @@ projects: [
 > Globally deployed on S3 + CloudFront for low-latency performance.
 
 `,
-  live: "https://carlys-run-club.com/",
-   github: "https://d2u9ocgx4ho4qa.cloudfront.net/"
+  live: "https://runclub.carlyjazwin.com/",
+   github: "https://github.com/gnarlycrly/carlys-run-club"
   },
   {
     id: "p2",
